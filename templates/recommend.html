@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>E-commerce</title>
+	<style type="text/css">
+		body {
+			background-color: ;
+			margin : 30px 8%;
+		}
+		.row {
+			padding: 10px 10px;
+			border-bottom: 1px grey solid;
+			border-top: 1px grey solid;
+			font-size: 19px;
+			color : brown;
+		}
+		#main {
+			background-color: #e8e4e3;
+			padding: 10px 10px;
+		}
+	</style>
+</head>
+<body>
+    
+
+<div id="main">
+	<h1 style="color : green">Shwoing result for {{ item }} : </h1>
+
+	<h2 style="color:blue">Recommended products : </h2>
+	
+	{% for p in cb_product_list %}
+
+		<div class="row"> {{ p }} </div>
+		
+	{% endfor %}
+	<br>
+	<h2 style="color:blue">Similar items you may like : </h2>
+	
+	{% for p in cf_product_list %}
+		<div class="row"> {{ p }} </div>
+	{% endfor %}
+</div>
+</body>
+</html>
